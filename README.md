@@ -1,4 +1,4 @@
-# Paradox Stand-alone launcher library integration for Playnite
+### Paradox Stand-alone launcher library integration for Playnite
 
 As of v0.1 (current release), the extension can:
 - add CKIII, Battletech and Stellaris into your games library regardless of ownership
@@ -13,9 +13,12 @@ Goals for 1.0:
 - proper install/uninstall support for both launcher and game list
 - overall, getting rid of spaghetti
 
-# Caveat Emptor
+### Caveat Emptor
 
 Extension's codebase is, essentially, a big bowl of spaghetti which just works.
+
 Good enough for code made by person which is incompatible with programming on genetic level.
+
 Exercise discretion prior to installing.
-- Aliaksandr
+
+-- Aliaksandr
