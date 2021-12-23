@@ -1,0 +1,1 @@
+# Playnite-Paradox-library-integration
