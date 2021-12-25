@@ -113,6 +113,10 @@ namespace Paradoxlibrary
                     },
                     IsInstalled = StellarisInstalled,
                     Source = new MetadataNameProperty("Paradox"),
+                    Links = new List<Link>()
+                    {
+                        new Link("Store", @"https://www.paradoxplaza.com/stellaris-all/")
+                    },
                     Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 },
                 // End of new game entry. Do note that last entry in the list should not have comma as last symbol.
@@ -133,6 +137,10 @@ namespace Paradoxlibrary
                     },
                     IsInstalled = BattletechInstalled,
                     Source = new MetadataNameProperty("Paradox"),
+                    Links = new List<Link>()
+                    {
+                        new Link("Store", @"https://www.paradoxplaza.com/battletech-all/")
+                    },
                     Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 },
                 new GameMetadata()
@@ -152,10 +160,39 @@ namespace Paradoxlibrary
                     },
                     IsInstalled = CK3Installed,
                     Source = new MetadataNameProperty("Paradox"),
+                    Links = new List<Link>()
+                    {
+                        new Link("Store", @"https://www.paradoxplaza.com/crusader-kings-all/")
+                    },
                     Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 }
             };
         }
+
+
+        // Start of blatant install/uninstall links adding.
+        // I'd really like to utilize something much more simple since we have only one entry point anyway,
+        // in a form of stand-alone launcher, but we're having what we're having for now.
+        public override IEnumerable<InstallController> GetInstallActions(GetInstallActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                yield break;
+            }
+
+            yield return new ParadoxlibraryInstallController(args.Game);
+        }
+
+        public override IEnumerable<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                yield break;
+            }
+
+            yield return new ParadoxlibraryUninstallController(args.Game);
+        }
+        // End of blatant install/uninstall links adding.
 
         // No settings - no problem. Looks optional.
         //public override ISettings GetSettings(bool firstRunSettings)

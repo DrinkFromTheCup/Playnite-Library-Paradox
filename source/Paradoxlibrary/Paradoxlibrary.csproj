@@ -105,6 +105,7 @@
     <Compile Include="Paradox.cs" />
     <Compile Include="ParadoxlibraryClient.cs" />
     <Compile Include="Paradoxlibrary.cs" />
+    <Compile Include="ParadoxlibraryGameController.cs" />
     <Compile Include="ParadoxlibrarySettings.cs" />
     <Compile Include="ParadoxlibrarySettingsView.xaml.cs">
       <DependentUpon>ParadoxlibrarySettingsView.xaml</DependentUpon>

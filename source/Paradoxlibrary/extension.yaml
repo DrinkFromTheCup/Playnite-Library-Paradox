@@ -1,7 +1,7 @@
 ﻿Id: Paradoxlibrary_5a25b200-7283-40a2-ad36-51abf4eb7ca0
 Name: Paradox library integration
 Author: Aliaksandr Dzik
-Version: 0.1
+Version: 0.2
 Module: Paradoxlibrary.dll
 Type: GameLibrary
 Icon: icon.png

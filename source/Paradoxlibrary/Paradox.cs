@@ -30,8 +30,6 @@ namespace Paradoxlibrary
         {
             get
             {
-                // It'd be nice to have extra check if Bootstrapper.exe itself exists (instead of folder which might be empty) - but I'm not skilled enough yet.
-                // Copying as is.
                 if (string.IsNullOrEmpty(ClientExecPath) || !File.Exists(ClientExecPath))
                 {
                     return false;
@@ -43,6 +41,9 @@ namespace Paradoxlibrary
             }
         }
 
+        // Since PDX utilizes TWO launchers (one stand-alone and one for CK3/HOI4/CS/whatever),
+        // we're obliged to look for stand-alone launcher explicitly.
+        // Fortunately, it DOES leave a discernable trace in registry outside of uninstallers...
         public static string InstallationPath
         {
             get
