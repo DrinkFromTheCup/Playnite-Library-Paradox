@@ -1,0 +1,36 @@
+Paradox Launcher,
+Registry path to launcher,Компьютер\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Paradox Interactive\Paradox Launcher\BootstrapperPath
+Registry path to launcher parameter,Path
+Launcher executable,Bootstrapper.exe
+,
+Registry path to games list,Компьютер\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Paradox Interactive\Paradox Launcher\LauncherPath
+Registry path to games list value,Path
+Games list,\apps
+Games list type,subfolders
+,
+Game installation path type,"static, same level with launcher"
+Game installation folder,..\games
+Universal executable,
+,
+"Test game (owned, installed)",Stellaris
+Registry path to game folder,Компьютер\HKEY_CURRENT_USER\System\GameConfigStore\Children\7653179e-dc3d-4fac-a303-c6f11bd281b7
+Registry path to game folder parameter,MatchedExeFullPath
+Game executable,stellaris.exe
+,
+"Test game (owned, not installed)",Battletech
+Registry path to game folder,not present
+Registry path to game folder parameter,not present
+Game executable,not present
+,
+"Test game (not owned, not installed)",Empire of Sin
+Registry path to game folder,not present
+Registry path to game folder parameter,not present
+Game executable,not present
+,
+Launcher’s features,
+Show installed,true
+Show & install owned,false
+URI,false
+Universal executable,false
+Universal executable name,none
+Universal executable type,none
